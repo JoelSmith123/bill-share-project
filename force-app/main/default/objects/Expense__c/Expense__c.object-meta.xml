@@ -45,7 +45,6 @@
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>true</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableLicensing>false</enableLicensing>
@@ -110,11 +109,6 @@
         <unique>false</unique>
     </fields>
     <gender>Neuter</gender>
-    <housekeepingPolicy>
-        <allowDelete>true</allowDelete>
-        <allowReparent>true</allowReparent>
-        <masterDetail>false</masterDetail>
-    </housekeepingPolicy>
     <label>Expense</label>
     <nameField>
         <displayFormat>EXP-{0000000000}</displayFormat>

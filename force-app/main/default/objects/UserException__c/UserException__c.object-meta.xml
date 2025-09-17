@@ -45,7 +45,6 @@
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
-    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
@@ -115,11 +114,6 @@
         <unique>false</unique>
     </fields>
     <gender>Neuter</gender>
-    <housekeepingPolicy>
-        <allowDelete>true</allowDelete>
-        <allowReparent>true</allowReparent>
-        <masterDetail>false</masterDetail>
-    </housekeepingPolicy>
     <label>User Exception</label>
     <nameField>
         <displayFormat>UE-{0000000000}</displayFormat>
