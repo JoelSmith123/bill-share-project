@@ -130,7 +130,7 @@
         <customTabListAdditionalFields>Percent__c</customTabListAdditionalFields>
         <lookupDialogsAdditionalFields>Name</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>User__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Category__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Category__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>ExceptionType__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Percent__c</lookupDialogsAdditionalFields>
         <searchFilterFields>Name</searchFilterFields>
