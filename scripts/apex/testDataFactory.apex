@@ -1,12 +1,30 @@
 public with sharing class TestDataFactory {
 
     public static void createTestData() {
+        System.debug('creating test data...');
         Account household = createHousehold();
         List<Contact> householdMembers = createHouseholdMembers(household.Id);
         List<ExpenseCategory__c> expenseCategories = createExpenseCategories(household.Id);
         List<Expense__c> expenses = createExpenses(household.Id, expenseCategories);
         createUserExpenses(expenses, householdMembers);
         createUserExceptions(householdMembers, expenseCategories);
+        System.debug('test data created!');
+    }
+
+    public static void createNewTestDataDeleteOld() {
+        this.deleteAllData();
+        this.createTestData();
+    }
+
+    public static void deleteAllData() {
+        System.debug('deleting test data...');
+        delete [SELECT Id FROM Account WHERE RecordTypeId = :Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Household').getRecordTypeId()];
+        delete [SELECT Id FROM Contact WHERE AccountId = :Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Household').getRecordTypeId()];
+        delete [SELECT Id FROM ExpenseCategory__c];
+        delete [SELECT Id FROM Expense__c];
+        delete [SELECT Id FROM UserExpense__c];
+        delete [SELECT Id FROM UserException__c];
+        System.debug('test data deleted.');
     }
     
     private static Account createHousehold() {
