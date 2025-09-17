@@ -59,7 +59,6 @@
         <referenceTo>Account</referenceTo>
         <relationshipLabel>Expenses</relationshipLabel>
         <relationshipName>Expenses</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -72,7 +71,6 @@
         <referenceTo>ExpenseCategory__c</referenceTo>
         <relationshipLabel>Expenses</relationshipLabel>
         <relationshipName>Expenses</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -116,24 +114,6 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Expenses</pluralLabel>
-    <searchLayouts>
-        <customTabListAdditionalFields>Name</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Description__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>TotalAmount__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>ExpenseDate__c</customTabListAdditionalFields>
-        <lookupDialogsAdditionalFields>Name</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Description__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>TotalAmount__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>ExpenseDate__c</lookupDialogsAdditionalFields>
-        <searchFilterFields>Name</searchFilterFields>
-        <searchFilterFields>Description__c</searchFilterFields>
-        <searchFilterFields>TotalAmount__c</searchFilterFields>
-        <searchFilterFields>ExpenseDate__c</searchFilterFields>
-        <searchResultsAdditionalFields>Name</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>TotalAmount__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ExpenseDate__c</searchResultsAdditionalFields>
-    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

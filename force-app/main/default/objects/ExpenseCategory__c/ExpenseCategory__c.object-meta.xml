@@ -59,7 +59,6 @@
         <referenceTo>Account</referenceTo>
         <relationshipLabel>Expense Categories</relationshipLabel>
         <relationshipName>ExpenseCategories</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -74,16 +73,6 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Expense Categories</pluralLabel>
-    <searchLayouts>
-        <customTabListAdditionalFields>Name</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Household__c</customTabListAdditionalFields>
-        <lookupDialogsAdditionalFields>Name</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Household__c</lookupDialogsAdditionalFields>
-        <searchFilterFields>Name</searchFilterFields>
-        <searchFilterFields>Household__c</searchFilterFields>
-        <searchResultsAdditionalFields>Name</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Household__c</searchResultsAdditionalFields>
-    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

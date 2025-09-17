@@ -59,7 +59,6 @@
         <referenceTo>Expense__c</referenceTo>
         <relationshipLabel>User Expenses</relationshipLabel>
         <relationshipName>UserExpenses</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -72,7 +71,6 @@
         <referenceTo>Contact</referenceTo>
         <relationshipLabel>User Expenses</relationshipLabel>
         <relationshipName>UserExpenses</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
         <reparentableMasterDetail>false</reparentableMasterDetail>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -98,24 +96,6 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>User Expenses</pluralLabel>
-    <searchLayouts>
-        <customTabListAdditionalFields>Name</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Expense__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>User__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>AmountPaid__c</customTabListAdditionalFields>
-        <lookupDialogsAdditionalFields>Name</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Expense__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>User__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>AmountPaid__c</lookupDialogsAdditionalFields>
-        <searchFilterFields>Name</searchFilterFields>
-        <searchFilterFields>Expense__c</searchFilterFields>
-        <searchFilterFields>User__c</searchFilterFields>
-        <searchFilterFields>AmountPaid__c</searchFilterFields>
-        <searchResultsAdditionalFields>Name</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Expense__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>User__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>AmountPaid__c</searchResultsAdditionalFields>
-    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
