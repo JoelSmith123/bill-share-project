@@ -53,41 +53,6 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <fields>
-        <fullName>Expense__c</fullName>
-        <label>Expense</label>
-        <referenceTo>Expense__c</referenceTo>
-        <relationshipLabel>User Expenses</relationshipLabel>
-        <relationshipName>UserExpenses</relationshipName>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
-    </fields>
-    <fields>
-        <fullName>User__c</fullName>
-        <label>User</label>
-        <referenceTo>Contact</referenceTo>
-        <relationshipLabel>User Expenses</relationshipLabel>
-        <relationshipName>UserExpenses</relationshipName>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
-    </fields>
-    <fields>
-        <fullName>AmountPaid__c</fullName>
-        <label>Amount Paid</label>
-        <precision>10</precision>
-        <required>false</required>
-        <scale>2</scale>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Currency</type>
-        <unique>false</unique>
-    </fields>
     <label>User Expense</label>
     <nameField>
         <displayFormat>UE-{0000000000}</displayFormat>
