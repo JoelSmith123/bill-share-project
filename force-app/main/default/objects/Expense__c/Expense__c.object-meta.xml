@@ -108,7 +108,6 @@
         <type>Date</type>
         <unique>false</unique>
     </fields>
-    <gender>Neuter</gender>
     <label>Expense</label>
     <nameField>
         <displayFormat>EXP-{0000000000}</displayFormat>

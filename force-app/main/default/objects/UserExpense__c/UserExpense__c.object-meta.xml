@@ -90,7 +90,6 @@
         <type>Currency</type>
         <unique>false</unique>
     </fields>
-    <gender>Neuter</gender>
     <label>User Expense</label>
     <nameField>
         <displayFormat>UE-{0000000000}</displayFormat>

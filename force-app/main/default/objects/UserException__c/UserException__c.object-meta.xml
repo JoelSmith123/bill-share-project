@@ -113,7 +113,6 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
-    <gender>Neuter</gender>
     <label>User Exception</label>
     <nameField>
         <displayFormat>UE-{0000000000}</displayFormat>
