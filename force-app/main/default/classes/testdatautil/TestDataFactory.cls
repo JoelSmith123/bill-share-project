@@ -1,6 +1,6 @@
 public with sharing class TestDataFactory {
 
-    public static void createTestData() {
+    public void createTestData() {
         System.debug('creating test data...');
         Account household = createHousehold();
         List<Contact> householdMembers = createHouseholdMembers(household.Id);
@@ -11,12 +11,12 @@ public with sharing class TestDataFactory {
         System.debug('test data created!');
     }
 
-    public static void createNewTestDataDeleteOld() {
+    public void createNewTestDataDeleteOld() {
         this.deleteAllData();
         this.createTestData();
     }
 
-    public static void deleteAllData() {
+    public void deleteAllData() {
         System.debug('deleting test data...');
         delete [SELECT Id FROM Account WHERE RecordTypeId = :Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Household').getRecordTypeId()];
         delete [SELECT Id FROM Contact WHERE AccountId = :Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Household').getRecordTypeId()];
@@ -27,7 +27,7 @@ public with sharing class TestDataFactory {
         System.debug('test data deleted.');
     }
     
-    private static Account createHousehold() {
+    private Account createHousehold() {
         System.debug('creating household...');
 
         String householdName = 'McAullife-Ortega-Smith Household';
@@ -45,7 +45,7 @@ public with sharing class TestDataFactory {
         return a;
     }
 
-    private static List<Contact> createHouseholdMembers(Id accountId) {
+    private List<Contact> createHouseholdMembers(Id accountId) {
         System.debug('creating household members...');
         List<Contact> householdMembersToAdd = new List<Contact>();
         List<Contact> allHouseholdMembers = new List<Contact>();
@@ -92,7 +92,7 @@ public with sharing class TestDataFactory {
         return allHouseholdMembers;
     }
 
-    private static Contact createHouseholdMember(Id accountId, String firstName, String lastName, String email, Decimal monthlyIncome) {
+    private Contact createHouseholdMember(Id accountId, String firstName, String lastName, String email, Decimal monthlyIncome) {
         Contact c = new Contact();
         c.FirstName = firstName;
         c.LastName = lastName;
@@ -102,7 +102,7 @@ public with sharing class TestDataFactory {
         return c;
     }
     
-    private static List<ExpenseCategory__c> createExpenseCategories(Id householdId) {
+    private List<ExpenseCategory__c> createExpenseCategories(Id householdId) {
         System.debug('creating expense categories...');
         List<ExpenseCategory__c> categoriesToAdd = new List<ExpenseCategory__c>();
         List<ExpenseCategory__c> allCategories = new List<ExpenseCategory__c>();
@@ -144,14 +144,14 @@ public with sharing class TestDataFactory {
         return allCategories;
     }
     
-    private static ExpenseCategory__c createExpenseCategory(Id householdId, String categoryName) {
+    private ExpenseCategory__c createExpenseCategory(Id householdId, String categoryName) {
         ExpenseCategory__c category = new ExpenseCategory__c();
-        category.Name = categoryName;
+        category.Name__c = categoryName;
         category.Household__c = householdId;
         return category;
     }
     
-    private static List<Expense__c> createExpenses(Id householdId, List<ExpenseCategory__c> categories) {
+    private List<Expense__c> createExpenses(Id householdId, List<ExpenseCategory__c> categories) {
         List<Expense__c> expensesToAdd = new List<Expense__c>();
         List<Expense__c> allExpenses = new List<Expense__c>();
         
@@ -202,7 +202,7 @@ public with sharing class TestDataFactory {
         return allExpenses;
     }
     
-    private static Expense__c createExpense(Id householdId, Id categoryId, String description, Decimal amount, Date expenseDate) {
+    private Expense__c createExpense(Id householdId, Id categoryId, String description, Decimal amount, Date expenseDate) {
         Expense__c expense = new Expense__c();
         expense.Household__c = householdId;
         expense.Category__c = categoryId;
@@ -212,7 +212,7 @@ public with sharing class TestDataFactory {
         return expense;
     }
     
-    private static void createUserExpenses(List<Expense__c> expenses, List<Contact> householdMembers) {
+    private void createUserExpenses(List<Expense__c> expenses, List<Contact> householdMembers) {
         List<UserExpense__c> userExpensesToAdd = new List<UserExpense__c>();
         
         // Get all user expenses from TestData
@@ -282,7 +282,7 @@ public with sharing class TestDataFactory {
         }
     }
     
-    private static void createUserExceptions(List<Contact> householdMembers, List<ExpenseCategory__c> categories) {
+    private void createUserExceptions(List<Contact> householdMembers, List<ExpenseCategory__c> categories) {
         List<UserException__c> exceptionsToAdd = new List<UserException__c>();
         
         // Get all user exceptions from TestData
@@ -349,12 +349,12 @@ public with sharing class TestDataFactory {
         }
     }
     
-    private static UserException__c createUserException(Id userId, Id categoryId, String exceptionType, Decimal percent) {
-        UserException__c exception = new UserException__c();
-        exception.User__c = userId;
-        exception.Category__c = categoryId;
-        exception.ExceptionType__c = exceptionType;
-        exception.Percent__c = percent;
-        return exception;
+    private UserException__c createUserException(Id userId, Id categoryId, String exceptionType, Decimal percent) {
+        UserException__c userException = new UserException__c();
+        userException.User__c = userId;
+        userException.Category__c = categoryId;
+        userException.ExceptionType__c = exceptionType;
+        userException.Percent__c = percent;
+        return userException;
     }
 }
